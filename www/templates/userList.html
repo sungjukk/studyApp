@@ -1,0 +1,14 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">UserList</h1>
+    <div class="button button-clear" ng-click="modal.hide()"><i class="icon ion-close" style="color : #535353"></i></div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <a class="item item-icon-left" ng-repeat="chatUser in chatUserList track by $index">
+        <i class="icon ion-person-stalker"></i>
+        {{chatUser}}
+      </a>
+    </div>
+  </ion-content>
+</ion-modal-view>

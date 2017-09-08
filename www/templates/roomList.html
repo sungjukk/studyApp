@@ -1,0 +1,13 @@
+<ion-view view-title="Chatting">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-plus-round" menu-toggle="right" ng-click="modal.show()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-refresher on-refresh="refreshRoomList()" spinner="crescent"></ion-refresher>
+    <div class="list">
+      <div class="item item-divider">RoomList</div>
+      <a class="item"  ng-repeat="room in roomList track by $index" ng-click="joinRoom('{{room}}')">{{room}}</a>
+    </div>
+  </ion-content>
+</ion-view>
